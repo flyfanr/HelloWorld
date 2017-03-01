@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.flyfanr.helloworld">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="com.flyfanr.helloworld.permission.SAY_HELLO"/>
+    
+    <permission android:name="com.flyfanr.helloworld.permission.MyAty"/>
+
+    <permission android:name="com.flyfanr.helloworld.permission.SAY_HELLO"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Edge Pro"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AnotherAty"
+            android:label="@string/title_activity_another_aty"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".BAty"
+            android:label="BAty"
+            android:theme="@style/Theme.AppCompat.Dialog" />
+        <activity
+            android:name=".TheAty"
+            android:label="@string/title_activity_the_aty"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".B_Aty" />
+        <activity
+            android:name=".MyAty"
+            android:label="MyAty"
+            android:permission="com.flyfanr.helloworld.permission.MyAty">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="com.flyfanr.helloworld.intent.action.MyAty" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MyAty1"
+            android:label="MyAty1">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="com.flyfanr.helloworld.intent.action.MyAty" />
+
+                <data android:scheme="app" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".LocalAppAty">
+            <intent-filter>
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <data android:scheme="app" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".LearnContext">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Main2"
+            android:label="Main2">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <service
+            android:name=".MyService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".MyService1"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".AppService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver
+            android:name=".MyReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter android:priority="10">
+                <action android:name="com.flyfanr.helloworld.intent.action.MyReciever" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".MyReceiver1"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter android:priority="9">
+                <action android:name="com.flyfanr.helloworld.intent.action.MyReciever" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".LearnWebView"></activity>
+    </application>
+
+</manifest>

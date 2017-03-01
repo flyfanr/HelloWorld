@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Edge Pro</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_another_aty">AnotherAty</string>
+    <string name="title_activity_another_aty_test">AnotherAty_test</string>
+    <string name="title_activity_the_aty">TheAty</string>
+</resources>
